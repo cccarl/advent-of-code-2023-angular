@@ -1,0 +1,8 @@
+.main {
+  color: white;
+}
+
+p:hover {
+  cursor: pointer;
+  background-color: black;
+}

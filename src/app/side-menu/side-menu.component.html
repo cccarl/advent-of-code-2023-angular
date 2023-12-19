@@ -1,0 +1,5 @@
+@for (menu of menus; track $index) {
+<section class="main">
+  <p (click)="goToQuestion('/problem/' + menu.routeNumber)">{{menu.title}}</p>
+</section>
+}

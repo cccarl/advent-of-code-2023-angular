@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+  background-color: #0f0f23;
+  color: white;
+}
+
+.flex-row-container {
+  display: flex;
+  flex-direction: row;
+}
+
+a {
+  color: white;
+}
+
+a:visited {
+  color: #bdbdbd;
+}
