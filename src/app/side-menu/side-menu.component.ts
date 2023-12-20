@@ -14,12 +14,12 @@ export class SideMenuComponent {
   readonly menus = [
     {
       id: "q1",
-      title: "Question 1",
+      title: "Day 1",
       routeNumber: 1
     },
     {
       id: "q2",
-      title: "Question 2",
+      title: "Day 2",
       routeNumber: 2
     },
   ]

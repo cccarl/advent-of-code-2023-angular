@@ -1,1 +1,29 @@
 <p>--- Day 2: Cube Conundrum ---</p>
+
+<a href="https://adventofcode.com/2023/day/2">Day 2 Link</a>
+
+<p>Game results:</p>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Possible</th>
+    <th>Power</th>
+  </tr>
+  @for (game of gameResults; track $index) {
+    <tr>
+      <td>{{game.gameId}}</td>
+      <td>{{game.possible}}</td>
+      <td>{{game.power}}</td>
+    </tr>
+
+  }
+</table>
+
+@if (part1FinalSum !== 0) {
+  <p>The sum of possible IDs is: {{ part1FinalSum }}</p>
+}
+
+@if (part2FinalSum !== 0) {
+  <p>The sum of all powers is: {{ part2FinalSum }}</p>
+}
