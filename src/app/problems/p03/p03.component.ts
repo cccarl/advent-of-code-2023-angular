@@ -22,7 +22,7 @@ interface MapNumberData {
 export class P03Component {
 
   input: string = "";
-  currentPartView = 2;
+  currentPartView = 1;
 
   // part 1
   validPoints: Coordinate[] = [];

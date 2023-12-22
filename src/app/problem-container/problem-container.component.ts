@@ -3,6 +3,7 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { P01Component } from '../problems/p01/p01.component';
 import { P02Component } from '../problems/p02/p02.component';
 import { P03Component } from '../problems/p03/p03.component';
+import { P04Component } from '../problems/p04/p04.component';
 
 @Component({
   selector: 'app-problem-container',
@@ -11,6 +12,7 @@ import { P03Component } from '../problems/p03/p03.component';
     P01Component,
     P02Component,
     P03Component,
+    P04Component,
   ],
   templateUrl: './problem-container.component.html',
   styleUrl: './problem-container.component.css'

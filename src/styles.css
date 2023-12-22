@@ -16,3 +16,8 @@ a {
 a:visited {
   color: #bdbdbd;
 }
+
+td, th {
+  border: 1px solid #e2e2e2;
+  padding: 8px;
+}
