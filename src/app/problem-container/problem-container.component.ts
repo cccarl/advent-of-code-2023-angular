@@ -2,6 +2,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { P01Component } from '../problems/p01/p01.component';
 import { P02Component } from '../problems/p02/p02.component';
+import { P03Component } from '../problems/p03/p03.component';
 
 @Component({
   selector: 'app-problem-container',
@@ -9,6 +10,7 @@ import { P02Component } from '../problems/p02/p02.component';
   imports: [
     P01Component,
     P02Component,
+    P03Component,
   ],
   templateUrl: './problem-container.component.html',
   styleUrl: './problem-container.component.css'

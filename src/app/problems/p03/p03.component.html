@@ -1,0 +1,45 @@
+<p>--- Day 3: Gear Ratios ---</p>
+<p>
+  <a href="https://adventofcode.com/2023/day/3">Day 3 Link</a>
+</p>
+
+<p>
+  <button (click)="currentPartView = 1">Part 1</button>
+  <button (click)="currentPartView = 2">Part 2</button>
+</p>
+
+@if (input.length > 0 && currentPartView === 1) {
+  <p>The map of valid points is:</p>
+  @for (y of createArrayRange(input.trimEnd().split("\n").length); track $index) {
+    <p class="monospace">{{y+1}}
+    @for (x of createArrayRange(input.trimEnd().split("\n")[y].length); track $index) {
+      @if (validatePoint({x: x, y: y})) {
+        V
+      } @else {
+        .
+      }
+    }
+    </p>
+  } @empty {
+    <p>Loading....... i think</p>
+  }
+  @if (finalpart1Sum > 0) {
+    <p>Part 1 Final Sum: {{ finalpart1Sum }}</p>
+  }
+}
+
+@if (input.length > 0 && currentPartView === 2) {
+  <p>The map of numbers and cogs is:</p>
+  @for (y of createArrayRange(input.trimEnd().split("\n").length); track $index) {
+    <p class="monospace">{{y+1}}
+    @for (x of createArrayRange(input.trimEnd().split("\n")[y].length); track $index) {
+      {{part2Map[y][x]}}
+    }
+    </p>
+  } @empty {
+    <p>Loading....... i think</p>
+  }
+  @if (finalpart2Sum > 0) {
+    <p>Part 2 Final Sum: {{ finalpart2Sum }}</p>
+  }
+}

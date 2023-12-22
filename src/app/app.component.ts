@@ -12,5 +12,4 @@ import { SideMenuComponent } from './side-menu/side-menu.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'advent-of-code-2023-angular';
 }

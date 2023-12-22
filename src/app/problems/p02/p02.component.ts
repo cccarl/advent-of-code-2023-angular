@@ -46,12 +46,12 @@ export class P02Component {
 
   determinePossibleGames(input: string): GameResults[] {
 
-    let finalRestults: GameResults[] = [];
+    let finalResults: GameResults[] = [];
 
     for (const line of input.split("\n")) {
       if (line === "") continue;
 
-      let possibleSets = true;
+      let possibleSet = true;
 
       const gameIdSetsSplit = line.split(": ");
       const gameId = Number(gameIdSetsSplit[0].substring(5));
@@ -70,7 +70,7 @@ export class P02Component {
           const quant = Number(splitQuantColor[0]);
           const colorKey = splitQuantColor[1] as keyof typeof limits;
           if ( limits[colorKey] < quant ) {
-            possibleSets = false;
+            possibleSet = false;
           }
 
           if (powerElems[colorKey] === undefined) {
@@ -84,15 +84,15 @@ export class P02Component {
 
       }
 
-      finalRestults.push({
-        possible: possibleSets,
+      finalResults.push({
+        possible: possibleSet,
         gameId: gameId,
         power: (powerElems.blue ?? 0) * (powerElems.green ?? 0) * (powerElems.red ?? 0),
       })
 
     }
 
-    return finalRestults;
+    return finalResults;
   }
 
 }
