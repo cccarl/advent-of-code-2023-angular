@@ -10,15 +10,36 @@
     <th>Winners!!!</th>
     <th>your shitty numers</th>
     <th>Score</th>
+    <th>Amount</th>
   </tr>
   @for (card of cards; track $index) {
     <tr>
       <td>{{card.id}}</td>
-      <td>{{card.winners}}</td>
-      <td>{{card.received}}</td>
+      <td>
+        @for (number of sortNumArray(card.winners); track $index) {
+          @if ( $index !== card.winners.length - 1 ) {
+            {{ number }} -
+          }
+          @else {
+            {{ number }}
+          }
+        }
+      </td>
+      <td>
+        @for (number of sortNumArray(card.received.sort()); track $index) {
+          @if ( $index !== card.received.length - 1 ) {
+            {{ number }} -
+          }
+          @else {
+            {{ number }}
+          }
+        }
+      </td>
       <td>{{card.scorePart1}}</td>
+      <td>{{ card.amount }}</td>
     </tr>
 }
 </table>
 
-<p>The Final Score Sum Is: {{part1FinalSum}}</p>
+<p>The Final Score Sum Is: {{ part1FinalSum }}</p>
+<p>The Final Amount of cards is: {{ part2FinalSum }}</p>
