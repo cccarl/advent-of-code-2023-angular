@@ -32,6 +32,11 @@ export class SideMenuComponent {
       title: "Day 4",
       routeNumber: 4
     },
+    {
+      id: "q5",
+      title: "Day 5",
+      routeNumber: 5
+    },
   ]
 
   constructor(private router: Router) {}

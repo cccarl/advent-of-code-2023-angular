@@ -1,0 +1,32 @@
+<p>--- Day 5: If You Give A Seed A Fertilizer ---</p>
+<p>
+  <a href="https://adventofcode.com/2023/day/5">Day 5 Link</a>
+</p>
+
+<p>Your seeds are: {{ seeds }}</p>
+
+<p>The ranges are:</p>
+<table>
+  <tr>
+    <th>Source</th>
+    <th>Destination</th>
+    <th>Source Range</th>
+    <th>Destination Range</th>
+  </tr>
+  @for (valueMap of valuesMap; track $index) {
+    @for (range of valueMap.rangeData; track $index) {
+      <tr>
+        <td>{{ valueMap.sourceCategory }}</td>
+        <td>{{ valueMap.destinationCategory }}</td>
+        <td>{{ range.sourceRangeStart }} - {{ range.sourceRangeStart + range.length }}</td>
+        <td>{{ range.destinationRangeStart }} - {{ range.destinationRangeStart + range.length }}</td>
+      </tr>
+    }
+  }
+</table>
+
+<p>The Resulting seeds are: {{ finalSeedsConversion }}</p>
+<p>Lowest: {{ getLowestNum(finalSeedsConversion) }}</p>
+<br>
+<p>Part 2:</p>
+<p>Lowest: {{ lowestSeedPart2 }}</p>

@@ -4,6 +4,7 @@ import { P01Component } from '../problems/p01/p01.component';
 import { P02Component } from '../problems/p02/p02.component';
 import { P03Component } from '../problems/p03/p03.component';
 import { P04Component } from '../problems/p04/p04.component';
+import { P05Component } from '../problems/p05/p05.component';
 
 @Component({
   selector: 'app-problem-container',
@@ -13,6 +14,7 @@ import { P04Component } from '../problems/p04/p04.component';
     P02Component,
     P03Component,
     P04Component,
+    P05Component,
   ],
   templateUrl: './problem-container.component.html',
   styleUrl: './problem-container.component.css'
